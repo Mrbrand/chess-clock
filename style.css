@@ -1,0 +1,48 @@
+body, html{height: 100%; width: 100%; margin: 0; background: #333; }
+
+#player2{
+    /* Rotate div */
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    }
+    
+    
+.player{
+    height: 30vh;
+    background-color: darkorange;
+    font-size: 30vw;
+    padding: 5vh 0;
+    font-family: Verdana;
+    text-align: center;
+}
+
+#controls{
+    padding: 5vh; 
+    height: 10vh;
+    text-align: center;
+    }
+    
+button{
+    margin: 10px;
+    height: 40px;
+    font-size: 20px;
+}
+
+
+input{
+    width: 30px;
+    margin: 3px;
+    padding:3px;
+    border-radius: 3px;
+    background: gray;
+}
+    
+    
+.active{background: #80ff00;
+        color: green;
+}
+
+.dead{background: red;
+        color: gray;
+}

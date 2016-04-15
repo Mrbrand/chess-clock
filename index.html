@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Schack</title> 
+        
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+        <!meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+		<link rel="apple-touch-icon" href="img/icon.png"/>
+ 
+        
+		
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+
+    	        
+        <script language="JavaScript" type="text/javascript" src="javascript/moment.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="javascript/jquery-2.1.3.min.js"></script> 
+       
+		
+	</head>
+
+    	<!--PLAY -------------------------------------------------------->
+		<div id="play" class="page">
+			  
+			<div id="player2" class="player">
+			10:00
+            </div> <!--end header-->
+			
+			<!--Sub-meny-->
+			<div id="controls">
+				
+                <img id="settings" src="img/settings.png" style="width:40px; margin:10px;">
+                <img id="pause" src="img/pause.png" style="width:40px; margin:10px;">
+                <img id="reset" src="img/reset.png" style="width:40px; margin:10px;">
+
+            </div><!-- end controls-->
+			
+			<!-- Projektlista -->
+			<div id="player1" class="player">
+                10:00
+            </div><!-- end items--> 
+			
+		</div><!-- end page-->
+
+
+		
+		<!--MENU --------------------------------------------------------->
+		<div id="menu" class="page" style="display:none;">
+			
+            Reset player2 (min:sec):
+            <input type="text" id="reset2_min">:<input type="text" id="reset2_sec"><br>
+            Reset player1 (min:sec):
+            <input type="text" id="reset1_min">:<input type="text" id="reset1_sec"><br>
+            Added time player2 (sec):<input type="text" id="plus2"><br>
+			Added time player1 (sec):<input type="text" id="plus1"><br>
+
+            Sound: <input type="checkbox" id="sound" checked><br>
+
+
+            <button id="cancel">Cancel</button> <button id="submit">Ok</button><br><br>
+            
+            Presets:<br>
+            <span onclick="$('#reset1_min, #reset2_min').val('05'); $('#reset1_sec, #reset2_sec').val('00');  $('#plus1, #plus2').val(3);">Blitz - 5 min (+3sec) </span><br>
+            <span onclick="$('#reset1_min, #reset2_min').val('10'); $('#reset1_sec, #reset2_sec').val('00');  $('#plus1, #plus2').val(5);">Blitz - 10 min (+5sec) </span><br>
+            <span onclick="$('#reset1_min, #reset2_min').val('15'); $('#reset1_sec, #reset2_sec').val('00');  $('#plus1, #plus2').val(5);">Blitz - 15 min (+5sec) </span><br>
+            
+		</div><!-- end page-->
+        
+	<body>
+</html>
+	
+	
+<script language="JavaScript" type="text/javascript" src="javascript.js"></script> 

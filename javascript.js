@@ -35,21 +35,27 @@ $(document).on('click', "#reset", function() {
 });
 
 // PLAYER 1
-$(document).on('click', "#player1", function() {
-    if(sound_on) click1.play();
+$(document).on('touchstart', "#player1", function() {
+    
     $("#player1").removeClass("active");
     $("#player2").addClass("active");
-    if(active_player=="player1") player1.timer += parseInt(player1.plus);
+    if(active_player=="player1") {	
+    	player1.timer += parseInt(player1.plus);
+    	if(sound_on) click1.play();
+    }
     $("#player1").html(timer_output(player1.timer));
     active_player = "player2";
 });
 
 // PLAYER 2
-$(document).on('click', "#player2", function() {
-    if(sound_on) click2.play();
+$(document).on('touchstart', "#player2", function() {
+    
     $("#player2").removeClass("active");
     $("#player1").addClass("active");
-    if(active_player=="player2") player2.timer += parseInt(player2.plus);
+    if(active_player=="player2") {
+    	player2.timer += parseInt(player2.plus);
+    	if(sound_on) click2.play();
+    }
     $("#player2").html(timer_output(player2.timer));
     active_player = "player1";
 });
@@ -115,8 +121,6 @@ $(document).on('click', "#cancel", function() {
 
 
 setInterval(function () {
-    
-    
     
     if(active_player == "player1"){
         player1.timer--;

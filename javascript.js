@@ -39,7 +39,7 @@ $(document).on('touchstart', "#player1", function() {
      if (player1.timer >0 & player2.timer >0){ 
 		$("#player1").removeClass("active");
 		$("#player2").addClass("active");
-		if(active_player=="player1") {	
+		if(active_player!="player2") {	
 			player1.timer += parseInt(player1.plus);
 			if(sound_on) click1.play();
 		}
@@ -53,7 +53,7 @@ $(document).on('touchstart', "#player2", function() {
     if (player1.timer >0 & player2.timer >0){ 
 		$("#player2").removeClass("active");
 		$("#player1").addClass("active");
-		if(active_player=="player2") {
+		if(active_player!="player1") {
 			player2.timer += parseInt(player2.plus);
 			if(sound_on) click2.play();
 		}
@@ -64,6 +64,9 @@ $(document).on('touchstart', "#player2", function() {
 
 // PAUSE
 $(document).on('click', "#pause", function() {
+    if(active_player!="none") {
+			if(sound_on) click2.play();
+		}
     $("#player2").removeClass("active");
     $("#player1").removeClass("active");
     active_player = "none";

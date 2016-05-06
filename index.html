@@ -30,10 +30,10 @@
 			
 			<!--Sub-meny-->
 			<div id="controls">
-				
-                <img id="settings" src="img/settings.png" style="width:40px; margin:10px;">
-                <img id="pause" src="img/pause.png" style="width:40px; margin:10px;">
-                <img id="reset" src="img/reset.png" style="width:40px; margin:10px;">
+				<span class="helper"></span>	
+                <img id="settings" src="img/settings.png" style="height:70px; margin:10px;">
+                <img id="pause" src="img/pause.png" style="height:60px; margin:10px;">
+                <img id="reset" src="img/reset.png" style="height:80px; margin:10px;">
 
             </div><!-- end controls-->
 			
@@ -47,7 +47,7 @@
 
 		
 		<!--MENU --------------------------------------------------------->
-		<div id="menu" class="page" style="display:none;">
+		<div id="menu" class="page" style="display:none; padding: 10px; font-size: 20px; ">
 			
             Reset player2 (min:sec):
             <input type="text" id="reset2_min">:<input type="text" id="reset2_sec"><br>
@@ -57,14 +57,16 @@
 			Added time player1 (sec):<input type="text" id="plus1"><br>
 
             Sound: <input type="checkbox" id="sound" checked><br>
-
-
-            <button id="cancel">Cancel</button> <button id="submit">Ok</button><br><br>
             
-            Presets:<br>
-            <span onclick="$('#reset1_min, #reset2_min').val('05'); $('#reset1_sec, #reset2_sec').val('00');  $('#plus1, #plus2').val(3);">Blitz - 5 min (+3sec) </span><br>
-            <span onclick="$('#reset1_min, #reset2_min').val('10'); $('#reset1_sec, #reset2_sec').val('00');  $('#plus1, #plus2').val(5);">Blitz - 10 min (+5sec) </span><br>
-            <span onclick="$('#reset1_min, #reset2_min').val('15'); $('#reset1_sec, #reset2_sec').val('00');  $('#plus1, #plus2').val(5);">Blitz - 15 min (+5sec) </span><br>
+            <h3>Presets</h3>
+            <button class="preset" onclick="$('#reset1_min, #reset2_min').val('05'); $('#reset1_sec, #reset2_sec').val('00');  $('#plus1, #plus2').val(3);">Blitz - 5 min (+3sec) </button><br>
+            <button class="preset" onclick="$('#reset1_min, #reset2_min').val('10'); $('#reset1_sec, #reset2_sec').val('00');  $('#plus1, #plus2').val(5);">Blitz - 10 min (+5sec) </button><br>
+            <button class="preset" onclick="$('#reset1_min, #reset2_min').val('15'); $('#reset1_sec, #reset2_sec').val('00');  $('#plus1, #plus2').val(5);">Blitz - 15 min (+5sec) </button><br>
+            
+            <br>
+            <button id="submit">Ok</button>
+            <button id="cancel">Cancel</button>
+            <br>
             
 		</div><!-- end page-->
         

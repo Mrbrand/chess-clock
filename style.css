@@ -1,4 +1,30 @@
-body, html{height: 100%; width: 100%; margin: 0; background: #666; }
+body, html{height: 100%; width: 100%; margin: 0; background: lightgray; }
+
+.preset{
+	font-size: 18px;
+}
+
+#submit, #cancel{
+	font-size: 30px;
+	height: 50px;
+	width: 130px;
+}
+
+#sound{
+	height:20px;
+}
+ 
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: middle;
+    max-height: 80px;
+    max-width: 160px;
+}
 
 #player2{
     /* Rotate div */
@@ -7,7 +33,7 @@ body, html{height: 100%; width: 100%; margin: 0; background: #666; }
     transform: rotate(180deg);
     }
     
-    
+   
 .player{
     height: 30vh;
     background-color: darkorange;
@@ -18,9 +44,9 @@ body, html{height: 100%; width: 100%; margin: 0; background: #666; }
 }
 
 #controls{
-    padding: 5vh; 
-    height: 10vh;
-    text-align: center;
+    height: 20vh;
+    text-align: center;  
+    background: #777;  
     }
     
 button{
@@ -35,7 +61,7 @@ input{
     margin: 3px;
     padding:3px;
     border-radius: 3px;
-    background: gray;
+    font-size: 20px;
 }
     
     

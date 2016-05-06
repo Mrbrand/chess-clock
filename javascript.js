@@ -63,7 +63,7 @@ $(document).on('touchstart', "#player2", function() {
 });
 
 // PAUSE
-$(document).on('click', "#pause", function() {
+$(document).on('touchstart', "#pause", function() {
     if(active_player!="none") {
 			if(sound_on) click2.play();
 		}
